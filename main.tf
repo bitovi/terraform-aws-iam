@@ -1,5 +1,5 @@
 provider "aws" {
-  region = "us-east-1" # Change to your AWS region
+  region = var.aws_region
 }
 
 resource "aws_iam_user" "opsly_tf_user" {
@@ -60,5 +60,5 @@ output "role_arn" {
 }
 
 output "region" {
-  value = "us-east-1" # Change to your AWS region
+  value = var.aws_region
 }
